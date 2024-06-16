@@ -36,7 +36,7 @@ Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/jackretterer/recallAIExample.git
-cd recall
+cd recallAIExample
 npm install
 ```
 
