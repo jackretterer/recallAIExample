@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recall AI Demo Application
+
+This is a Next.js application developed to showcase the capabilities of the Recall AI APIs. The app demonstrates a simple user flow where users can invite a bot to join a call using a URL and an API key, interact with the call, and then retrieve processed data including a video recording, transcript, and AI-generated summary.
+
+## Features
+
+- **Join Call**: Users can enter a meeting URL and an API key to send a bot to a call.
+- **Leave Call**: Users can disconnect the bot from the call.
+- **Data Retrieval**: Post-call, the application provides a video recording, the call's transcript, and an AI-generated summary.
+
+## Technologies Used
+
+- **Next.js**
+- **TypeScript**
+- **Tailwind CSS**
+- **Recall AI APIs**: Utilized for processing and analyzing call data.
+
+## Recall AI's APIs Used
+
+- `/bot`: Makes bot join the call for analysis and processing.
+- `/leave-call`: Forces bot to leave the call.
+- `/analyze`: Starts a analysis job which is essential for /intelligence.
+- `/intelligence`: Fetches an AI-generated summary of the call.
+- `/transcript`: Retrieves the transcription of the call.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js
+- npm (Node Package Manager)
+
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/jackretterer/recallAIExample.git
+cd recall
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Application
+Start the development server:
+```
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can view the web application by navigating to http://localhost:3000 in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future Enhancements
+- Enhance UI/UX design for a more engaging, responsive and accurate user experience.
+- Implement additional API features.
+- Increase the robustness of error handling and data validation.
+- Probably not have the user input an API-Key. Also wouldn't want to pass that API key across the application. Better to save in process.env. 
